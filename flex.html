@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .flex {
+            background-color: blue;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .flex-col {
+            background-color: red;
+            margin: 10px;
+            flex: 1 150px;
+        }
+
+        .flex-col:nth-child(3) {
+            flex: 4 150px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .gallery .img {
+            background-color: white;
+            height: 50px;
+            flex: 1 0 25%;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex">
+        <div class="flex-col"><h3>Inicio</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit deleniti molestias, nisi numquam animi error expedita blanditiis incidunt nam quae temporibus recusandae, harum, quisquam veniam dolorem dignissimos ratione deserunt obcaecati.</p>
+            <div class="gallery">
+                <div class="img"></div>
+                <div class="img"></div>
+                <div class="img"></div>
+                <div class="img"></div>
+            </div>
+        </div>
+        <div class="flex-col"><h3>Produtos</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit deleniti molestias, nisi numquam animi error expedita blanditiis incidunt nam quae temporibus recusandae, harum, quisquam veniam dolorem dignissimos ratione deserunt obcaecati.</p>
+        </div>
+        <div class="flex-col"><h3>Contato</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit deleniti molestias, nisi numquam animi error expedita blanditiis incidunt nam quae temporibus recusandae, harum, quisquam veniam dolorem dignissimos ratione deserunt obcaecati.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit deleniti molestias, nisi numquam animi error expedita blanditiis incidunt nam quae temporibus recusandae, harum, quisquam veniam dolorem dignissimos ratione deserunt obcaecati.</p>
+        </div>
+        <div class="flex-col"><h3>Sobre Nós</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit deleniti molestias, nisi numquam animi error expedita blanditiis incidunt nam quae temporibus recusandae, harum, quisquam veniam dolorem dignissimos ratione deserunt obcaecati.</p>
+        </div>
+        <div class="flex-col"><h3>Rastreio</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit deleniti molestias, nisi numquam animi error expedita blanditiis incidunt nam quae temporibus recusandae, harum, quisquam veniam dolorem dignissimos ratione deserunt obcaecati.</p>
+        </div>
+    </div>
+</body>
+</html>
