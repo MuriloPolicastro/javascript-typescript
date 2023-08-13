@@ -365,8 +365,8 @@ footer {
 
 .back-to-top a {
     position: fixed;
-    bottom: 1rem;
-    right: 1rem;
+    bottom: 2rem;
+    right: 2rem;
     background-color: var(--secondy-color);
     border: 0.1rem solid var(--primary-color);
     color: var(--primary-color);
@@ -435,6 +435,7 @@ footer {
     }
 
     .close-menu {
+        display: none;
         position: fixed;
         z-index: 2;
         top: 0;
@@ -456,5 +457,18 @@ footer {
         padding: 0.5rem;
         width: 4rem;
         height: 4rem;
+        cursor: pointer;
+    }
+
+    .close-menu:checked~.menu {
+        display: block;
+    }
+
+    .close-menu:checked~.close-menu-label::after{
+        content: 'X';
+    }
+
+    .menu-space {
+        height: 0;
     }
 }
