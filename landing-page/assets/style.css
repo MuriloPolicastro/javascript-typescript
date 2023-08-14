@@ -30,7 +30,7 @@ body {
 
 aside.menu {
     width: 100%;
-    height: 5rem;
+    height: 6.2rem;
     background-color: var(--secondy-color);
     display: flex;
     position: fixed;
@@ -162,6 +162,7 @@ nav ul a:hover::after {
     flex-flow: column nowrap;
     justify-content: center;
     color: var(--secondy-color);
+    margin-top: 1.5rem;
 }
 
 .top-3-content h2 {
@@ -173,29 +174,28 @@ nav ul a:hover::after {
     font-size: 2.5rem;
 }
 
-.top-3-text {
+.top-3-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: var(--gap);
     margin-top: 8rem;
+    counter-reset: top-3-text;
 }
 
-.top-3-text p {
+.top-3-grid p {
     font-size: 2.2rem;
 }
 
-.top-3-text h3 {
-    position: relative;
+.top-3-grid h3 {
     font-size: 3rem;
-    margin: 2rem 0 2rem 7rem;
 }
 
-.top-3-text h3::before {
+.top-3-grid h3::before {
     counter-increment: top-3-text;
     content: counter(top-3-text);
-    position: absolute;
     font-size: 8rem;
-    left: -5rem;
+    margin-right: 2rem;
     transform: rotate(5deg);
     font-style: italic;
+    margin-bottom: 9rem;
 }
