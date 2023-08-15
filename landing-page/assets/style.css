@@ -11,6 +11,7 @@
 * {
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
 }
 
 html {
@@ -26,6 +27,11 @@ body {
 .main-content {
     max-width: 120rem;
     padding: 4rem;
+}
+
+body .full-width {
+    flex: 1 1 100%;
+    width: 100%;
 }
 
 aside.menu {
@@ -110,15 +116,15 @@ nav ul a:hover::after {
     grid-template-columns: 1fr 1.5fr;
     align-items: center;
     gap: var(--gap);
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
-    top: -8rem;
+    top: 4rem;
 }
 
 .intro-content .intro-text {
     color: var(--secondy-color);
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     justify-content: center;
 }
 
@@ -233,8 +239,8 @@ nav ul a:hover::after {
 
 .gallery-img {
     overflow: hidden;
-    max-width: 36rem;
-    max-height: 36rem;
+    max-width: 50rem;
+    max-height: 50rem;
 }
 
 .gallery-img img {
@@ -289,18 +295,93 @@ transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
 
 .form-contact {
     grid-column: span 2;
+    font-size: 2rem;
 }
 
+.form-grid {
+    border: none;
+    display: flex;
+    flex-flow: row wrap ;
+    gap: var(--gap);
+}
 
+.form-grid legend {
+    padding-top: 4rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
 
+.form-item {
+    flex: 1 1 320px;
+}
 
+.form-item label {
+    display: block;
+    margin-bottom: 1rem;
+}
 
+.form-item input,
+.form-item textarea {
+    width: 100%;
+    border: none;
+    padding: 1.5rem 2rem;
+    outline: none;
+}
+
+.form-item input:focus,
+.form-item textarea:focus {
+    box-shadow: 0 0 10px 2px #525fb6;
+}
+
+.form-item button {
+    border: 0.5rem solid var(--secondy-color);
+    background-color: var(--primary-color);
+    color: var(--secondy-color);
+    padding: 1rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.form-item button:hover {
+    border: 0.5rem solid var(--secondy-color);
+    background-color: var(--secondy-color);
+    color: var(--primary-color);
+}
+
+.form-item ::placeholder {
+    color: lightgray;
+    font-size: 2rem;
+}
 
 footer {
-    height: 5rem;
     text-align: center;
     font-size: 1.2rem;
     font-weight: light;
     color: var(--primary-color);
-    margin-top: 3%;
+    padding: 2rem;
+}
+
+@media (max-width:800px) {
+    .intro-content {
+        grid-template-columns: 1fr;
+        margin-bottom: 3rem;
+    }
+
+    .intro-img img {
+        
+    }
+
+    .top-3-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+
+    .form-contact {
+        grid-column: 1;
+    }
 }
