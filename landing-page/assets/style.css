@@ -362,6 +362,24 @@ footer {
     padding: 2rem;
 }
 
+.back-to-top a {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: var(--secondy-color);
+    border: 0.1rem solid var(--primary-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media (max-width:800px) {
     .intro-content {
         grid-template-columns: 1fr;
