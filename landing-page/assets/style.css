@@ -408,6 +408,7 @@ footer {
         top: 0;
         bottom: 0;
         align-items: center;
+        display: none;
     }
 
     .menu-content, .menu-content ul {
@@ -446,6 +447,9 @@ footer {
         z-index: 2;
         top: 2rem;
         right: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: var(--primary-color);
         color: var(--secondy-color);
         font-size: 2rem;
