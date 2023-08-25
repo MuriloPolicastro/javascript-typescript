@@ -18,6 +18,9 @@ function meuEscopo(){
             peso: peso.value,
             altura: altura.value
         });
+
+    resultado.innerHTML += `<p>${nome.value} ${sobrenome.value} ${peso.value} ${altura.value}</p>`
+
     }
 
     form.addEventListener('submit', recebeEventoForm);
