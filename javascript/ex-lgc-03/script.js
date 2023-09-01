@@ -9,23 +9,13 @@ Use a função com números de 0 a 100
 */
 
 function fizzBuzz (x) {
-    if (typeof x === "number") {
-        if (x > 0 && x < 100) {
-            if (x % 3 && x % 5) {
-                console.log ('FizzBuzz');
-            } else if (x % 3) {
-                console.log ('Fizz');
-            } else if (x % 5) {
-                console.log ('Buzz');
-            } else {
-                console.log(x);
-            }
-        } else {
-            console.log('Insira um número de 0 a 100.');
-        }
-    } else {
-        console.log('Insira um número válido.');
-    }
-}
+    if (typeof x !== 'number') return x;
+    if (x % 3 === 0) return 'Fizz';
+    if (x % 5 === 0) return 'Buzz';
+    if (x % 3 === 0 && x % 5 === 0) return 'FizzBuzz';
+    return x;
+};
 
-fizzBuzz(15);
+for (let i = 0; i <= 100; i++) {
+    console.log(i, fizzBuzz(i));
+}
