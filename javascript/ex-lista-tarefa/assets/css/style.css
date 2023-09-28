@@ -34,7 +34,6 @@ body {
   border-radius: 10px;
   display: flex;
   justify-content: 1fr 2fr;
-  align-items: flex-start;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.308);
 }
 
@@ -55,17 +54,26 @@ button:hover {
   background-color: #ebf0f2;
   min-height: 50vh;
   padding: 30px;
-  padding-top: 50px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
   border-right: 1px solid #adc3cb;
+}
+
+.add-tarefa h1 {
+  color: #adc3cb;
 }
 
 .add-tarefa input {
   height: 30px;
   outline: none;
   border: 1px solid #adc3cb;
+}
+
+.add-tarefa input:focus {
+  box-shadow: 0px 0px 6px #adc3cb;
 }
 
 .add-tarefa button {
@@ -85,7 +93,7 @@ button:hover {
 }
 
 .lista-tarefas ul li {
-  list-style: circle;
+  text-transform: capitalize;
 }
 
 
