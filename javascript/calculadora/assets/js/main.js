@@ -58,7 +58,19 @@ function criaCalculadora() {
         },
 
         resolveConta() {
+            let conta = this.display.value;
+            try {
+                conta = eval(conta);
 
+                if (!conta){
+                    alert('Conta Inválida')
+                }
+
+                this.display.value = String(conta);
+            } catch(err) {
+                alert('Conta Inválida');
+                return;
+            }
         },
     };
 }
