@@ -1,5 +1,5 @@
 // Filter é usada para filtrar um array e sempre ira retornar um novo array, ela vai iterar sobre cada indice do array.
-// A função filter requer que voce retorne um boolean para imbutir ou não no novo array.
+// A função filter requer que voce retorne um boolean(true ou false) para imbutir ou não no novo array.
 // Filter -> Sempre vai retornar um array, com a mesma quantidade de elementos ou menos.
 
 const numeros = [5, 80, 60, 70, 8, 9, 2, 1, 98, 13, 22];
