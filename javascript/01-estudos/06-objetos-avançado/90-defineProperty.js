@@ -4,20 +4,35 @@
     enumerable - > Mostra ou esconde a chave.
     value -> Exibe o valor.
     writable -> Se pode ou não alterar o valor.
-    configurable -> Se pode ou não ser confugurada(deletada, alterada, etc).
+    configurable -> Se pode ou não ser reconfigurada(deletada, alterada, etc).
 */
 
 // 'Object.keys()' mostra as chaves de um objeto.
 
+// defineProperty -> Define apenas uma chave.
+// defineProperties -> Define diversas chaves.
+
 function Produto(nome, preco, estoque) {
-    this.nome = nome,
-    this.preco = preco,
-    
     Object.defineProperty(this, 'estoque', {
         enumerable: true, 
         value: estoque, // pode ser qualquer coisa até uma func
         writable: true, // true permite alterar o valor
         configurable: false // true permite fazer alteracao
+    });
+
+    Object.defineProperties(this, {
+        nome: {
+            enumerable: true, 
+            value: nome, // pode ser qualquer coisa até uma func
+            writable: true, // true permite alterar o valor
+            configurable: false // true permite fazer alteracao
+        },
+        preco: {
+            enumerable: true, 
+            value: preco, // pode ser qualquer coisa até uma func
+            writable: true, // true permite alterar o valor
+            configurable: false // true permite fazer alteracao
+        }
     });
 };
 
