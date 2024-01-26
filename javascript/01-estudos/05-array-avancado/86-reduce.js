@@ -19,7 +19,7 @@ const arrayDobro = numeros.reduce(function(acumulador, valor) {
     acumulador.push(valor * 2);
     return acumulador;
 }, []);
-//console.log(arrayDobro);
+console.log(arrayDobro);
 
 // Retorne a pessoa mais velha.
 const pessoas = [
@@ -34,4 +34,4 @@ const maisVelha = pessoas.reduce(function(acumulador, valor) {
     if(acumulador.idade > valor.idade) return acumulador;
     return valor;
 });
-console.log(maisVelha);
+//console.log(maisVelha);
