@@ -19,5 +19,20 @@ let cpfLimpo = cpf.replace(/\D+/g, '');
 cpfArray = Array.from(cpfLimpo);
 const cpfDobrado = cpfArray.map(valor => valor);
 
+function ValidaCPF (cpfEnviado) {
+    Object.defineProperty(this, 'cpfLimpo', {
+        enumerable: true,
+        get: function() {
+            return cpfEnviado.replace(/\D+/g, '')
+        }
+    });
+}
+
+ValidaCPF.prototype.valida = function () {
+    if (typeof this.cpfLimpo === 'undefined') return false;
+    if (this.cpfLimpo.length !== 11) return false;
+    
+}
+
 
 //console.log(cpfArray.reduce((ac, val) => ac + Number(val), 0));
