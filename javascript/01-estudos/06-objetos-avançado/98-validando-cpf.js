@@ -14,7 +14,6 @@ Se o númeor digito for maior que 9, consideramos 0.
 11 - (284 % 11) = 2 (Primeiro digito)
 Se o númeor digito for maior que 9, consideramos 0.
 */
-let cpf = '705.484.450-52';
 let cpfLimpo = cpf.replace(/\D+/g, '');
 cpfArray = Array.from(cpfLimpo);
 const cpfDobrado = cpfArray.map(valor => valor);
@@ -28,11 +27,14 @@ function ValidaCPF (cpfEnviado) {
     });
 }
 
+// No valida deverá retornar no final verdadeiro ou falso, ela será a função responsavel por toda a checagem e validação do CPF.
 ValidaCPF.prototype.valida = function () {
     if (typeof this.cpfLimpo === 'undefined') return false;
     if (this.cpfLimpo.length !== 11) return false;
     
 }
+
+const cpf = new ValidaCPF('705.484.450-52');
 
 
 //console.log(cpfArray.reduce((ac, val) => ac + Number(val), 0));
