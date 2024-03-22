@@ -2,6 +2,8 @@
 
 // As Promises são paralelas, o JS continua executando o codigo e quando as Promises estão prontas ele executa.
 
+// Pode ser enviado apenas um parametro dentro do resolve().
+
 function rand(min, max) {
     min *= 1000;
     max *= 1000;
@@ -28,6 +30,8 @@ esperaAi('Frase 1', rand(1,5), function() {
 
 function esperaAi(msg, tempo) {
     return new Promise((resolve, reject) => {
+        if(typeof msg !== 'string') reject('BAD VALUE');
+
         setTimeout(() => {
             resolve(msg);
         }, tempo);
@@ -37,10 +41,13 @@ function esperaAi(msg, tempo) {
 // .then é usado para resolve .catch é usado para o reject.
 esperaAi('Frase 1', rand(1,5)).then( resposta => {
     console.log(resposta)
-    return esperaAi('Frase 2', rand(1,5))
+    return esperaAi(2222, rand(1,5))
 }).then( resposta => {
     console.log(resposta)
     return esperaAi('Frase 3', rand(1,5))
-}).then(resposta => console.log(resposta));
+}).then(resposta => console.log(resposta))
+.catch(e => {
+    console.log('Erro:', e);
+});
 
 console.log('Isso será exibido antes de qualquer Promise.');
