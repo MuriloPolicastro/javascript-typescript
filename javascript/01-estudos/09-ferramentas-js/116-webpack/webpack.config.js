@@ -9,4 +9,26 @@ const path = require('path');
 module.exports = {
     mode: 'development',
     entry: './src/index.js',
+    output: {
+       path: path.resolve(__dirname, 'public', 'assets', 'js'),
+       filename: 'bundle.js'
+    },
+    module: {
+        rules: [{
+            // Para o webpack não ficar analisando essa pasta.
+            exclude: /node_modules/,
+            // Qual vai ser a extensão dos arquivos que vão ser testados.
+            test: /\.js$/,
+            use: {
+                loader: 'babel-loader',
+                options: {
+                    presets: ['@babel/env']
+                }
+            }
+        }]
+    },
+    devtool: 'source-map'
 };
+// O resolve procura o diretorio sozinho com base no nome das pastas inseridos.
+// __dirname é o diretorio atual.
+// O (devtool: 'souce-map') é usado para mapear o arquivo e saber de onde vem cada coisa.
