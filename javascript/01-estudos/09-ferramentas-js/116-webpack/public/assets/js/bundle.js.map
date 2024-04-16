@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle.js","mappings":"AAAAA,OAAOC,MAAM,gBAIbC,QAAQC,IAAI","sources":["webpack://116-webpack/./src/index.js"],"sourcesContent":["window.alert('Olá, mundos!')\r\n//2\r\n//3\r\n//4\r\nconsole.log('Olá terraquios')"],"names":["window","alert","console","log"],"sourceRoot":""}
