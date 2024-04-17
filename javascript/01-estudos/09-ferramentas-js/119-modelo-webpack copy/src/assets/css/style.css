@@ -56,3 +56,33 @@ form button {
 form button:hover {
   background: var(--primary-color-darker);
 }
+
+.container h1 {
+  text-align: center;
+}
+
+.senha-gerada {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+.gerar-senha {
+  font-size: 1rem;
+  margin: 20px 0;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+
+.gerar-senha:hover {
+  background-color: #fff;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
