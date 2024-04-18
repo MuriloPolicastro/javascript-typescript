@@ -1,0 +1,18 @@
+No console utilizar o comando -> (npm init -y) para instalar o package.
+
+^ -> Significa que o pack vai se manter sempre atualizado.
+
+Para instalar um pack basta usar o comando -> (npm install (nome do pack)).
+
+Os packs podem ficar instalados nas dependencias do projeto ou no devdependencies que são dependencias apenas de desenvolvimento não será necessario usar no servidor final, como por exemplo webpack e babel.
+
+Para salvar um pack nas devdependencies basta usar o comando -> (npm install (nome do pack) --save-dev).
+Para salvar em dependencies usa-se o comando -> (npm install (nome do pack) --save-prod).
+
+Para instalar uma versão especifica usar -> (npm install nome do pack@versao).
+
+Para remover um pack usar -> (npm uninstall nome do pack).
+
+A versão do pack é composta por major, minor e patch. São separadas por pontos e quando alterado o major as coisas da versão anterior não funcionaram mais.
+
+Para ver as versões do pack usar -> (npm outdated).
